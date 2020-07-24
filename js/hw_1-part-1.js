@@ -105,7 +105,6 @@
 
 // console.log(message);
 
-
 // задача - 4 (v-3)
 
 // const orderPieces = 7;
@@ -115,26 +114,25 @@
 // const CANCELED_BY_USER = 'Отменено пользователем!';
 // const ACCESS_DENIED = 'Недостаточно средств на счету!';
 
-// let totalPrice = orderPieces * pricePerDroid; 
-// let balanceCredit = credits - totalPrice; 
+// let totalPrice = orderPieces * pricePerDroid;
+// let balanceCredit = credits - totalPrice;
 // let message;
 
 // if (orderPieces === null) {
-//   message = CANCELED_BY_USER;  
-// } 
+//   message = CANCELED_BY_USER;
+// }
 // else if (totalPrice > credits) {
 //   message = ACCESS_DENIED;
-// } 
+// }
 // else {
 //   message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
 // }
 
 // console.log(message);
 
-
 // задача - 5 v-1
 
-const countryName = null
+const countryName = null;
 
 const CANCELED_BY_USER = 'Отменено пользователем!';
 const NO_DELIVERY = 'В выбранную страну доставка недоступна.';
@@ -146,34 +144,31 @@ let message;
 let price = 0;
 let country;
 
-
 if (countryName === null) {
   message = CANCELED_BY_USER;
-} 
-else {
+} else {
   country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase();
   switch (country) {
     case INDIA:
       price = 80;
-      message = `Доставка в ${country} будет стоить ${price} кредитов`;
       break;
-          case CHINA:
+    case CHINA:
       price = 100;
-      message = `Доставка в ${country} будет стоить ${price} кредитов`;
       break;
-          case JAMAICA:
+    case JAMAICA:
       price = 120;
-      message = `Доставка в ${country} будет стоить ${price} кредитов`;
       break;
-          case AUSTRALIA:
+    case AUSTRALIA:
       price = 170;
-      message = `Доставка в ${country} будет стоить ${price} кредитов`;
-      break;     
-    default: console.log(NO_DELIVERY);
+      break;
+    default:
+      message = NO_DELIVERY;
   }
 }
-
-
+if (price > 0) {
+  message = `Доставка в ${country} будет стоить ${price} кредитов`;
+}
+console.log(message);
 
 // задача - 5 v-2
 
@@ -188,7 +183,6 @@ else {
 // let message;
 // let price = 0;
 // let country;
-
 
 // if (countryName === null) {
 //   message = CANCELED_BY_USER;

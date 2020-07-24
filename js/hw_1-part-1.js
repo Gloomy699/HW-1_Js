@@ -45,42 +45,42 @@
 // console.log(message);
 
 // задача - 4 (v-1)
-const orderPieces = null;
+// const orderPieces = null;
 
-const credits = 23580;
-const pricePerDroid = 3000;
-const CANCELED_BY_USER = 'Отменено пользователем!';
-const ACCESS_DENIED = 'Недостаточно средств на счету!';
+// const credits = 23580;
+// const pricePerDroid = 3000;
+// const CANCELED_BY_USER = 'Отменено пользователем!';
+// const ACCESS_DENIED = 'Недостаточно средств на счету!';
 
-let totalPrice = orderPieces * pricePerDroid; // Write code in this line
-let balanceCredit = credits - totalPrice; // Write code in this line
-let message;
+// let totalPrice = orderPieces * pricePerDroid; // Write code in this line
+// let balanceCredit = credits - totalPrice; // Write code in this line
+// let message;
 
-// Write code under this line
-message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
+// // Write code under this line
+// message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
 
-if (orderPieces < 8) {
-  console.log(message);
-} else if (orderPieces === 1) {
-  console.log(message);
-} else if (orderPieces === 2) {
-  console.log(message);
-} else if (orderPieces === 3) {
-  console.log(message);
-} else if (orderPieces === 4) {
-  console.log(message);
-} else if (orderPieces === 5) {
-  console.log(message);
-} else if (orderPieces === 6) {
-  console.log(message);
-} else if (orderPieces === 7) {
-  console.log(message);
-} else if (orderPieces === null) {
-  message = CANCELED_BY_USER;
-} else {
-  message = ACCESS_DENIED;
-}
-console.log(message);
+// if (orderPieces < 8) {
+//   console.log(message);
+// } else if (orderPieces === 1) {
+//   console.log(message);
+// } else if (orderPieces === 2) {
+//   console.log(message);
+// } else if (orderPieces === 3) {
+//   console.log(message);
+// } else if (orderPieces === 4) {
+//   console.log(message);
+// } else if (orderPieces === 5) {
+//   console.log(message);
+// } else if (orderPieces === 6) {
+//   console.log(message);
+// } else if (orderPieces === 7) {
+//   console.log(message);
+// } else if (orderPieces === null) {
+//   message = CANCELED_BY_USER;
+// } else {
+//   message = ACCESS_DENIED;
+// }
+// console.log(message);
 
 // задача - 4 (v-2)
 // const orderPieces = null;
@@ -103,4 +103,117 @@ console.log(message);
 //   message = ACCESS_DENIED;
 // }
 
+// console.log(message);
+
+
+// задача - 4 (v-3)
+
+// const orderPieces = 7;
+
+// const credits = 23580;
+// const pricePerDroid = 3000;
+// const CANCELED_BY_USER = 'Отменено пользователем!';
+// const ACCESS_DENIED = 'Недостаточно средств на счету!';
+
+// let totalPrice = orderPieces * pricePerDroid; 
+// let balanceCredit = credits - totalPrice; 
+// let message;
+
+// if (orderPieces === null) {
+//   message = CANCELED_BY_USER;  
+// } 
+// else if (totalPrice > credits) {
+//   message = ACCESS_DENIED;
+// } 
+// else {
+//   message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
+// }
+
+// console.log(message);
+
+
+// задача - 5 v-1
+
+const countryName = null
+
+const CANCELED_BY_USER = 'Отменено пользователем!';
+const NO_DELIVERY = 'В выбранную страну доставка недоступна.';
+const CHINA = 'Китай';
+const AUSTRALIA = 'Австралия';
+const INDIA = 'Индия';
+const JAMAICA = 'Ямайка';
+let message;
+let price = 0;
+let country;
+
+
+if (countryName === null) {
+  message = CANCELED_BY_USER;
+} 
+else {
+  country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase();
+  switch (country) {
+    case INDIA:
+      price = 80;
+      message = `Доставка в ${country} будет стоить ${price} кредитов`;
+      break;
+          case CHINA:
+      price = 100;
+      message = `Доставка в ${country} будет стоить ${price} кредитов`;
+      break;
+          case JAMAICA:
+      price = 120;
+      message = `Доставка в ${country} будет стоить ${price} кредитов`;
+      break;
+          case AUSTRALIA:
+      price = 170;
+      message = `Доставка в ${country} будет стоить ${price} кредитов`;
+      break;     
+    default: console.log(NO_DELIVERY);
+  }
+}
+
+
+
+// задача - 5 v-2
+
+// const countryName = "АвсТраЛия"
+
+// const CANCELED_BY_USER = 'Отменено пользователем!';
+// const NO_DELIVERY = 'В выбранную страну доставка недоступна.';
+// const CHINA = 'Китай';
+// const AUSTRALIA = 'Австралия';
+// const INDIA = 'Индия';
+// const JAMAICA = 'Ямайка';
+// let message;
+// let price = 0;
+// let country;
+
+
+// if (countryName === null) {
+//   message = CANCELED_BY_USER;
+//   console.log(message);
+// } else {
+//   country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase();
+//   switch (country) {
+//     case INDIA:
+//       price = 80;
+//       break;
+//           case CHINA:
+//       price = 100;
+//       break;
+//           case JAMAICA:
+//       price = 120;
+//       break;
+//           case AUSTRALIA:
+//       price = 170;
+//       break;
+//     default: message = NO_DELIVERY;
+//     console.log(message);
+//   }
+// }
+// if (price > 0) { message = `Доставка в ${country} будет стоить ${price} кредитов`;
+// console.log(message);
+// }
+// message = `Доставка в ${country} будет стоить ${price} кредитов`;
 // console.log(message);

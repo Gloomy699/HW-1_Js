@@ -48,3 +48,73 @@
 // // const poly = new User( 'Poly', 3, 17);
 // // console.log(poly.getInfo());
 // // 'User Poly is 3 years old and has 17 followers'
+
+//------------------------------------------------------------------------------------////------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------////------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//задача 3//--------------------------------------------------------------------------------//
+
+// Write code under this line
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
+  getItems() {
+    return this.items;
+  }
+  addItem(item) {
+    return this.items.push(item);
+  }
+  removeItem(item) {
+    console.log(item);
+    const { items } = this;
+    // console.log(items);
+    for (let i = 0; i < items.length; i += 1) {
+      const item = items[i];
+
+      //   console.log(item);
+      //   if (items.includes(item)) {
+      //     items.splice(i, 1);
+      //   }
+      if (item === items[i]) {
+        items.splice(i, 1);
+      }
+    }
+  }
+
+  // console.log(items);
+  // console.log(this.items);
+}
+
+console.log(typeof Storage);
+// 'function'
+
+const goods = ['Нанитоиды', 'Пролонгер', 'Железные жупи', 'Антигравитатор'];
+
+const storage = new Storage(goods);
+
+console.log(storage.getItems());
+/* [
+  'Нанитоиды',
+  'Пролонгер',
+  'Железные жупи',
+  'Антигравитатор'
+] */
+
+storage.addItem('Дроид');
+console.log(storage.getItems());
+/* [
+  'Нанитоиды',
+  'Пролонгер',
+  'Железные жупи',
+  'Антигравитатор',
+  'Дроид'
+] */
+
+storage.removeItem('Пролонгер');
+console.log(storage.getItems());
+/* [
+  'Нанитоиды',
+  'Железные жупи',
+  'Антигравитатор',
+  'Дроид'
+] */

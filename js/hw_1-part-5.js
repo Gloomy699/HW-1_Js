@@ -54,67 +54,60 @@
 //--------------------------------------------------------------------------------//задача 3//--------------------------------------------------------------------------------//
 
 // Write code under this line
-class Storage {
-  constructor(items) {
-    this.items = items;
-  }
-  getItems() {
-    return this.items;
-  }
-  addItem(item) {
-    return this.items.push(item);
-  }
-  removeItem(item) {
-    console.log(item);
-    const { items } = this;
-    // console.log(items);
-    for (let i = 0; i < items.length; i += 1) {
-      const item = items[i];
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(item) {
+//     return this.items.push(item);
+//   }
+//   removeItem(item) {
+//     const { items } = this;
+//     for (let i = 0; i < items.length; i += 1) {
+//       if (items[i].includes(item)) {
+//         items.splice(i, 1);
+//       }
+//     }
+//   }
+// }
 
-      //   console.log(item);
-      //   if (items.includes(item)) {
-      //     items.splice(i, 1);
-      //   }
-      if (item === items[i]) {
-        items.splice(i, 1);
-      }
-    }
-  }
+// console.log(typeof Storage);
+// // 'function'
 
-  // console.log(items);
-  // console.log(this.items);
-}
+// const goods = ['Нанитоиды', 'Пролонгер', 'Железные жупи', 'Антигравитатор'];
 
-console.log(typeof Storage);
-// 'function'
+// const storage = new Storage(goods);
 
-const goods = ['Нанитоиды', 'Пролонгер', 'Железные жупи', 'Антигравитатор'];
+// console.log(storage.getItems());
+// /* [
+//   'Нанитоиды',
+//   'Пролонгер',
+//   'Железные жупи',
+//   'Антигравитатор'
+// ] */
 
-const storage = new Storage(goods);
+// storage.addItem('Дроид');
+// console.log(storage.getItems());
+// /* [
+//   'Нанитоиды',
+//   'Пролонгер',
+//   'Железные жупи',
+//   'Антигравитатор',
+//   'Дроид'
+// ] */
 
-console.log(storage.getItems());
-/* [
-  'Нанитоиды',
-  'Пролонгер',
-  'Железные жупи',
-  'Антигравитатор'
-] */
+// storage.removeItem('Пролонгер');
+// console.log(storage.getItems());
+// /* [
+//   'Нанитоиды',
+//   'Железные жупи',
+//   'Антигравитатор',
+//   'Дроид'
+// ] */
 
-storage.addItem('Дроид');
-console.log(storage.getItems());
-/* [
-  'Нанитоиды',
-  'Пролонгер',
-  'Железные жупи',
-  'Антигравитатор',
-  'Дроид'
-] */
-
-storage.removeItem('Пролонгер');
-console.log(storage.getItems());
-/* [
-  'Нанитоиды',
-  'Железные жупи',
-  'Антигравитатор',
-  'Дроид'
-] */
+//------------------------------------------------------------------------------------////------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------////------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------//задача 4//--------------------------------------------------------------------------------//

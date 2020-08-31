@@ -161,11 +161,14 @@ const users = [
 //------------------------------------------------------------------------------------////------------------------------------------------------------------------------------//
 //------------------------------------------------------------------------------------////------------------------------------------------------------------------------------//
 //--------------------------------------------------------------------------------//задача 10//--------------------------------------------------------------------------------//
-const getSortedUniqueSkills = array =>
-  array
-    .slice()
-    .reduce((skill, { skills }) => skill + skills, [])
-    .filter((item, index) => array.indexOf(item) === index)
-    .sort();
+//const getSortedUniqueSkills = array =>
+//  array
+//    .slice()
+//    .reduce((skill, { skills }) => skill + skills, [])
+//    .filter((item, index) => array.indexOf(item) === index)
+//    .sort();
+
+const getSortedUniqueSkills = (array) => array.slice()
+    .reduce((acc, { skills }) => [...acc, ...skills], []).filter((item, index, array) => array.indexOf(item) === index).sort();
 
 console.log(getSortedUniqueSkills(users));
